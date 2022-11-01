@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="764.0" prefWidth="1226.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="schoolmanagementsystem.FXMLDocumentController">
+   <children>
+      <HBox prefHeight="764.0" prefWidth="1226.0">
+         <children>
+            <VBox fx:id="rightvBox" prefHeight="758.0" prefWidth="396.0" spacing="15.0" style="-fx-background-color: transparent;">
+               <children>
+                  <Pane fx:id="leftPane" prefHeight="155.0" prefWidth="245.0">
+                     <children>
+                        <Label layoutX="96.0" layoutY="66.0" text="SMSystem" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Hebrew Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="61.0" fitWidth="68.0" layoutX="12.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/Untitled%20design.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <JFXButton fx:id="studentBtn" buttonType="RAISED" onAction="#handlerClicks" prefHeight="55.0" prefWidth="256.0" style="-fx-background-color: #0024564d;" textFill="WHITE">
+                     <graphic>
+                        <HBox prefHeight="56.0" prefWidth="226.0">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="GROUP" size="30" wrappingWidth="37.33333206176758">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIconView>
+                              <Label prefHeight="46.0" prefWidth="154.0" text="Students" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Arial" size="17.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="teachersBtn" buttonType="RAISED" onAction="#handlerClicks" prefHeight="55.0" prefWidth="256.0" style="-fx-background-color: #0024564d;" text="Button" textFill="WHITE">
+                     <graphic>
+                        <HBox prefHeight="56.0" prefWidth="226.0">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="BRIEFCASE" size="30" wrappingWidth="37.33333206176758">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIconView>
+                              <Label prefHeight="46.0" prefWidth="154.0" text="Teachers" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Arial" size="17.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="rhBtn" buttonType="RAISED" onAction="#handlerClicks" prefHeight="55.0" prefWidth="256.0" style="-fx-background-color: #0024564d;" textFill="WHITE">
+                     <graphic>
+                        <HBox prefHeight="56.0" prefWidth="226.0">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CHECK" size="30" wrappingWidth="37.33333206176758">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIconView>
+                              <Label prefHeight="46.0" prefWidth="154.0" text="Human Ressource" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Arial" size="17.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="feesBtn" buttonType="RAISED" onAction="#handlerClicks" prefHeight="55.0" prefWidth="256.0" style="-fx-background-color: #0024564d;" textFill="WHITE">
+                     <graphic>
+                        <HBox prefHeight="56.0" prefWidth="226.0">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="EURO" size="30" wrappingWidth="37.33333206176758">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIconView>
+                              <Label prefHeight="46.0" prefWidth="154.0" text="Fees" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Arial" size="17.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="settingsBtn" buttonType="RAISED" onAction="#handlerClicks" prefHeight="55.0" prefWidth="256.0" style="-fx-background-color: #0024564d;" textFill="WHITE">
+                     <graphic>
+                        <HBox prefHeight="56.0" prefWidth="226.0">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="COG" size="30" wrappingWidth="37.33333206176758">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIconView>
+                              <Label prefHeight="46.0" prefWidth="154.0" text="Settings" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Arial" size="17.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <AnchorPane fx:id="rightSidePageAnch" prefHeight="764.0" prefWidth="1027.0" style="-fx-background-color: transparent;">
+               <children>
+                  <AnchorPane fx:id="anchStudent" layoutX="20.0" layoutY="253.0" style="-fx-background-color: transparent;">
+                     <children>
+                        <VBox layoutY="51.0" prefHeight="443.0" prefWidth="927.0">
+                           <children>
+                              <GridPane fx:id="gridStudents" prefHeight="437.0" prefWidth="927.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="447.66668701171875" minHeight="10.0" prefHeight="432.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <TableView prefHeight="200.0" prefWidth="963.0" stylesheets="@table.css">
+                                      <columns>
+                                        <TableColumn prefWidth="141.66665649414062" style="-fx-background-color: #0024564d; -fx-text-fill: white;" text="ID" />
+                                        <TableColumn minWidth="8.333343505859375" prefWidth="165.00003051757812" resizable="false" style="-fx-background-color: #0024564d; -fx-text-fill: white;" text="First Name" />
+                                          <TableColumn minWidth="8.333343505859375" prefWidth="165.00003051757812" style="-fx-background-color: #0024564d; -fx-text-fill: white;" text="Second Name" />
+                                          <TableColumn minWidth="8.333343505859375" prefWidth="165.00003051757812" style="-fx-background-color: #0024564d; -fx-text-fill: white;" text="Birthday" />
+                                          <TableColumn minWidth="8.333343505859375" prefWidth="165.00003051757812" style="-fx-background-color: #0024564d; -fx-text-fill: white;" text="Level" />
+                                          <TableColumn minWidth="8.333343505859375" prefWidth="135.3333740234375" style="-fx-background-color: #0024564d; -fx-text-fill: white;" text="Join at" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                                
+                              </GridPane>
+                           </children>
+                        </VBox>
+                        <HBox layoutY="6.0" prefHeight="35.0" prefWidth="927.0" spacing="10.0">
+                           <children>
+                              <TextField fx:id="searchStuentsInTab" prefHeight="35.0" prefWidth="510.0" promptText="Search Student" style="-fx-background-radius: none; -fx-background-color: #000d1e5c; -fx-border-color: #0077FB; -fx-text-fill: WHITE; -fx-prompt-text-fill: white;" />
+                              <ComboBox fx:id="StudentyearChoiceBox" prefHeight="33.0" prefWidth="167.0" promptText="Year" style="-fx-background-color: #0024564d; -fx-border-color: #0077FB;" stylesheets="@textFieldStyle.css" />
+                              <JFXButton fx:id="searchbtn" alignment="CENTER" ellipsisString="" onAction="#handlerClicks" prefHeight="46.0" prefWidth="35.0" ripplerFill="WHITE" style="-fx-border-color: #0077FB;" textFill="WHITE">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="20" text="" wrappingWidth="19.0" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="addStuedentFirstPage" onAction="#handlerClicks" prefHeight="46.0" prefWidth="173.0" ripplerFill="#001aff" style="-fx-background-color: #0024564d; -fx-border-color: #0077FB;" textFill="WHITE">
+                                 <graphic>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="47.0" prefWidth="163.0" spacing="15.0">
+                                       <children>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="20">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </FontAwesomeIconView>
+                                          <Label text="Add Student" textFill="WHITE">
+                                             <font>
+                                                <Font name="Arial" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+                  <Pane fx:id="menuPane" layoutY="56.0" prefHeight="116.0" prefWidth="964.0" style="-fx-background-color: #0024564d;" AnchorPane.topAnchor="56.0">
+                     <children>
+                        <Label fx:id="titleMenu" layoutX="53.0" layoutY="51.0" prefHeight="32.0" prefWidth="111.0" text="Students" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Hebrew Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="menuSubDomain" layoutX="54.0" layoutY="29.0" text="/Home/students" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Hebrew Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="-3.0" layoutY="-100.0" orientation="VERTICAL" prefHeight="764.0" prefWidth="6.0" />
+                        <Separator layoutY="-1.0" prefHeight="0.0" prefWidth="964.0" />
+                     </children>
+                  </Pane>
+                  <JFXButton fx:id="closebtn" ellipsisString="" layoutX="930.0" layoutY="1.0" onAction="#handlerClicks" prefHeight="23.0" prefWidth="24.0" ripplerFill="RED" style="-fx-background-color: #0077FB;" textFill="WHITE" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="-1.0">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="15" text="" />
+                     </graphic>
+                  </JFXButton>
+                  <Separator layoutY="173.0" prefHeight="0.0" prefWidth="964.0" />
+                  <BorderPane fx:id="teacherAnch" layoutX="12.0" layoutY="185.0" prefHeight="571.0" prefWidth="941.0" visible="false">
+                     <top>
+                        <HBox prefHeight="39.0" prefWidth="941.0" spacing="60.0" style="-fx-background-color: #002254;" BorderPane.alignment="CENTER">
+                           <children>
+                              <JFXComboBox prefHeight="32.0" prefWidth="189.0" promptText="Year" style="-fx-prompt-text-fill: white;">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </JFXComboBox>
+                              <JFXComboBox prefHeight="32.0" prefWidth="189.0" promptText="Level" style="-fx-prompt-text-fill: white;" />
+                              <JFXComboBox prefHeight="32.0" prefWidth="189.0" promptText="Stutus" style="-fx-prompt-text-fill: white;" />
+                              <JFXButton fx:id="addStuedentFirstPage1" onAction="#handlerClicks" prefHeight="46.0" prefWidth="173.0" ripplerFill="WHITE" style="-fx-background-color: #0024564d; -fx-border-color: white;" textFill="WHITE">
+                                 <graphic>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="47.0" prefWidth="163.0" spacing="15.0">
+                                       <children>
+                                          <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="20">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </FontAwesomeIconView>
+                                          <Label text="Add Teacher" textFill="WHITE">
+                                             <font>
+                                                <Font name="Arial" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </top>
+                     <left>
+                        <VBox prefHeight="532.0" prefWidth="291.0" spacing="20.0" style="-fx-background-color: #002254;" BorderPane.alignment="CENTER">
+                           <children>
+                              <HBox prefHeight="127.0" prefWidth="308.0">
+                                 <children>
+                                    <ImageView fitHeight="129.0" fitWidth="117.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/teacher_PNG84.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox prefHeight="100.0" prefWidth="202.0">
+                                       <children>
+                                          <Label prefHeight="40.0" prefWidth="204.0" text="Miss        :      Daren Paniva" textFill="WHITE">
+                                             <font>
+                                                <Font name="Arial Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label prefHeight="40.0" prefWidth="204.0" text="Age          :     25 yo" textFill="WHITE">
+                                             <font>
+                                                <Font name="Arial Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label prefHeight="40.0" prefWidth="204.0" text="Status       :    Active" textFill="WHITE">
+                                             <font>
+                                                <Font name="Arial Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <Label alignment="CENTER" prefHeight="37.0" prefWidth="293.0" style="-fx-border-color: white;" text="Contact information" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </Label>
+                              <HBox prefHeight="44.0" prefWidth="291.0">
+                                 <children>
+                                    <Label prefHeight="49.0" prefWidth="72.0" text="Phone :" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label prefHeight="57.0" prefWidth="219.0" text="+212633447046" textFill="WHITE" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="44.0" prefWidth="291.0">
+                                 <children>
+                                    <Label prefHeight="49.0" prefWidth="72.0" text="Email :" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label prefHeight="57.0" prefWidth="219.0" text="bakkalimounir41@gmail.com" textFill="WHITE" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="44.0" prefWidth="291.0">
+                                 <children>
+                                    <Label prefHeight="49.0" prefWidth="72.0" text="Fax :" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label prefHeight="57.0" prefWidth="219.0" text="0533447046" textFill="WHITE" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="44.0" prefWidth="291.0">
+                                 <children>
+                                    <Label prefHeight="49.0" prefWidth="72.0" text="SSN :" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label prefHeight="57.0" prefWidth="219.0" text="22#######00" textFill="WHITE" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="44.0" prefWidth="291.0">
+                                 <children>
+                                    <Label prefHeight="49.0" prefWidth="72.0" text="Iban :" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label prefHeight="57.0" prefWidth="219.0" text="6512##################01" textFill="WHITE" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </left>
+                     <right>
+                        <ImageView fitHeight="522.0" fitWidth="649.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                           <image>
+                              <Image url="@../img/Teacher-Effectiveness-White.jpeg" />
+                           </image>
+                        </ImageView>
+                     </right>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
